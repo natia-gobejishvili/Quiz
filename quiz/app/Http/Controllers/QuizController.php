@@ -29,7 +29,8 @@ class QuizController extends Controller
             'question' => 'required',
             'answer' => 'required',
             'question_id' => 'required',
-            'image'
+            'image',
+        
         ]);
 
     
@@ -74,5 +75,44 @@ class QuizController extends Controller
     
         return redirect()->route('quizzes.index')
                         ->with('success','Quiz deleted successfully');
+    }
+/////////////////////////////////////////////////////////
+    
+    public function showQuizzes() {
+        $mainquizzes = Quiz::all();
+
+        $mainquizzes = Quiz::latest()->paginate(5);
+ 
+        return view('mainquizzes',compact('mainquizzes'))
+            ->with('i', (request()->input('page', 1) - 1) * 5);
+
+        return view("mainquizzes", [
+            "mainquizzes" => $mainquizzes
+        ]);    
+    }
+
+    public function quiz($id) {
+        $mainquizzes = Quiz::find($id);
+        return view("quiz", [
+            "quiz" => $mainquizzes
+        ]);
+    }
+
+////////////////////////////////////////////////////////////
+
+    public function startQuiz() {
+        $startquiz = Quiz::all();
+
+        return view("startquiz", [
+            "startquiz" => $startquiz
+        ]);
+    }
+
+    public function Result() {
+        $result = Quiz::all();
+
+        return view("result", [
+            "result" => $result
+        ]);
     }
 }

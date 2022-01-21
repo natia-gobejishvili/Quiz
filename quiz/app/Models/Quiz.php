@@ -14,8 +14,27 @@ class Quiz extends Model
         'title', 'body', 'author', 'image', 'question', 'answer','question_id'
     ];
 
-  //  public function comments()
+    protected $guarded = [];
+
+
+   // public function user()
+    //{
+    //    return $this->belongsTo(User::class);
+   // }
+
+   // public function quizzes()
    // {
-   //     return $this->hasMany(Comment::class)->whereNull('parent_id');
+   //     return $this->hasMany(Quiz::class);
+   // }
+
+   // public function questions()
+   // {
+    //    return $this->hasMany(Question::class);
+   // }
+
+  //  public function section()
+  //  {
+  //      return $this->belongsTo(Section::class);
   //  }
+  
 }

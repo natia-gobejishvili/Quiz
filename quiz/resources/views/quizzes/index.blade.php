@@ -8,7 +8,7 @@
             </div><br>
 
             <div class="pull-right">
-                <a class="btn btn-warning" href="{{ route('quizzes.index') }}"> Home</a>
+                <a class="btn btn-warning" href="/mainquizzes"> Home</a>  
             </div>
             <div class="pull-right">
                 <a class="btn btn-success" href="{{ route('quizzes.create') }}"> Create New Quiz</a>

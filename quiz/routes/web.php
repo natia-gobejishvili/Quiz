@@ -25,7 +25,15 @@ Route::domain('admin.localhost')->group(function () {
   
   });
   
+//////////////////////////////
+Route::get('/mainquizzes', [QuizController::class, "showQuizzes"]);
+Route::get('/mainquizzes/{id}', [QuizController::class, "quiz"]);
 
+Route::get('/mainquizzes/{id}/startquiz', [QuizController::class, "startQuiz"]);
+Route::get('/mainquizzes/{id}/startquiz/result', [QuizController::class, "Result"]);
+
+//Route::get('/startquiz', [QuizController::class, "startQuiz"]);
+//Route::get('/startquiz/{id}', [QuizController::class, "result"]);
 
 Route::get('/', function () {
     return view('welcome');
