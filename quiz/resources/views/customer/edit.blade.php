@@ -1,4 +1,4 @@
-@extends('quizzes.layout')
+@extends('customer.layout')
    
 @section('content')
     <div class="row">
@@ -7,7 +7,7 @@
                 <h2>Edit Quiz</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-info" href="{{ route('quizzes.index') }}"> Back</a>
+                <a class="btn btn-info" href="{{ route('customer.index') }}"> Back</a>
             </div>
         </div>
     </div><br>
@@ -23,10 +23,9 @@
         </div>
     @endif
   
-    <form action="{{ route('quizzes.update',$quiz->id) }}" method="POST">
+    <form action="{{ route('customer.update',$quiz->id) }}" method="POST">
         @csrf
         @method('PUT')
-   
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
@@ -55,10 +54,6 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Question:</strong>
-                <input type="text" name="question" value="{{ $quiz->question }}" class="form-control" placeholder="Change the question...">
-                <input type="text" name="question" value="{{ $quiz->question }}" class="form-control" placeholder="Change the question...">
-                <input type="text" name="question" value="{{ $quiz->question }}" class="form-control" placeholder="Change the question...">
-                <input type="text" name="question" value="{{ $quiz->question }}" class="form-control" placeholder="Change the question...">
                 <input type="text" name="question" value="{{ $quiz->question }}" class="form-control" placeholder="Change the question...">
             </div>
         </div>

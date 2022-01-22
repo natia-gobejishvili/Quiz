@@ -20,21 +20,24 @@
     <h1 class="text-center">Quiz Page</h1><br>
 
         <div class="d-flex justify-content-center mb-3">
-            <div class="card" style="width:400px">
+            <div class="card" style="width:500px">
                 <h4 class="text-center card-title"> {{ $quiz->title }} </h4><br>
-                <img class="card-img-top" src="https://edsurge.imgix.net/uploads/post/image/14021/math_feedback_tool-1613759841.jpg?auto=compress%2Cformat&w=1080&h=437&fit=crop" alt="Card image" style="width:100%">
+                <img class="card-img-top" src="https://res.cloudinary.com/practicaldev/image/fetch/s--uh2TFqei--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://imgur.com/Mj3H69v.png" alt="Card image" style="width:100%">
                 <div class="card-body">
                     <p class="card-text">{{ $quiz->body }}</p>
                     <small><p class="card-text"> {{ $quiz->author }}</p></small> <br>
-                    <p class="card-text"> Questions: <br> {{ $quiz->question }}</p>
-                    <a href="/mainquizzes/{{$quiz->id}}/startquiz" class="btn btn-primary">Start</a>
-                  <!--  <a href="/startquiz" class="btn btn-primary">Start</a> -->
-                
+                    <strong>Questions:</strong>
+                    <p class="card-text">
+                        <br> {{ $quiz->question }}<br>
+                        <br> {{ $quiz->question }}<br>
+                        <br> {{ $quiz->question }}<br>
+                        <br> {{ $quiz->question }}<br>
+                        <br> {{ $quiz->question }}<br>
+                    </p><br>
+                    <a href="/mainquizzes/{{$quiz->id}}/startquiz" class="btn btn-primary">Start</a>              
                 </div>
             </div>
-            <br>
-        </div><br>
+        </div>
     </div>
-
 </body>
 </html>

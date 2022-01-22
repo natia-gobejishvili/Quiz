@@ -21,21 +21,124 @@
     @foreach($startquiz as $quiz)
     @endforeach
         <div class="d-flex justify-content-center mb-3">
-            <div class="card" style="width:400px">
-                <h4 class="text-center card-title">{{ $quiz->title }}  </h4><br>
-                <img class="card-img-top" src="https://edsurge.imgix.net/uploads/post/image/14021/math_feedback_tool-1613759841.jpg?auto=compress%2Cformat&w=1080&h=437&fit=crop" alt="Card image" style="width:100%">{{ $quiz->image }}
+            <div class="card" style="width:500px">
+               <!-- <h4 class="text-center card-title">{{ $quiz->title }}  </h4><br>-->
+                <img class="card-img-top" src="https://datacrayon.com/images/html-css-javascript/bootstrap5.jpg" alt="Card image" style="width:100%">
                 <div class="card-body">
-                    <p class="card-text">{{ $quiz->body }}</p>
-                    <small><p class="card-text"> </p></small> <br>
-                    <p class="card-text"> Questions: <br> </p>
+                <nav aria-label="...">
+                    <ul class="pagination">
+                        <li class="page-item disabled">
+                        <a class="page-link">Previous</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item active" aria-current="page">
+                        <a class="page-link" href="#">2 <span class="visually-hidden">(current)</span></a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                        <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                        </li>
+                    </ul>
+                </nav>
+                    <p class="card-text">
+                        <br> {{ $quiz->question }}<br>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" checked>  {{ $quiz->answer }}
+                            <label class="form-check-label" for="radio1" ></label>
+                        </div>
+                        <div class="form-check"> 
+                            <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2" checked>  {{ $quiz->answer }}
+                            <label class="form-check-label" for="radio2"></label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2" checked>  {{ $quiz->answer }}
+                            <label class="form-check-label" for="radio2"></label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2" checked>  {{ $quiz->answer }}
+                            <label class="form-check-label" for="radio2"></label>
+                        </div> 
+
+                        <br> {{ $quiz->question }}<br>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" checked>  {{ $quiz->answer }}
+                            <label class="form-check-label" for="radio1" ></label>
+                        </div>
+                        <div class="form-check"> 
+                            <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2" checked>  {{ $quiz->answer }}
+                            <label class="form-check-label" for="radio2"></label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2" checked>  {{ $quiz->answer }}
+                            <label class="form-check-label" for="radio2"></label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2" checked>  {{ $quiz->answer }}
+                            <label class="form-check-label" for="radio2"></label>
+                        </div>
+
+                        <br> {{ $quiz->question }}<br>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" checked>  {{ $quiz->answer }}
+                            <label class="form-check-label" for="radio1" ></label>
+                        </div>
+                        <div class="form-check"> 
+                            <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2" checked>  {{ $quiz->answer }}
+                            <label class="form-check-label" for="radio2"></label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2" checked>  {{ $quiz->answer }}
+                            <label class="form-check-label" for="radio2"></label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2" checked>  {{ $quiz->answer }}
+                            <label class="form-check-label" for="radio2"></label>
+                        </div>
+
+                        <br> {{ $quiz->question }}<br>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" checked>  {{ $quiz->answer }}
+                            <label class="form-check-label" for="radio1" ></label>
+                        </div>
+                        <div class="form-check"> 
+                            <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2" checked>  {{ $quiz->answer }}
+                            <label class="form-check-label" for="radio2"></label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2" checked>  {{ $quiz->answer }}
+                            <label class="form-check-label" for="radio2"></label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2" checked>  {{ $quiz->answer }}
+                            <label class="form-check-label" for="radio2"></label>
+                        </div>
+
+                        <br> {{ $quiz->question }}<br>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" checked>  {{ $quiz->answer }}
+                            <label class="form-check-label" for="radio1" ></label>
+                        </div>
+                        <div class="form-check"> 
+                            <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2" checked>  {{ $quiz->answer }}
+                            <label class="form-check-label" for="radio2"></label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2" checked>  {{ $quiz->answer }}
+                            <label class="form-check-label" for="radio2"></label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2" checked>  {{ $quiz->answer }}
+                            <label class="form-check-label" for="radio2"></label>
+                        </div>
+                    </p>
+
+                    <br>
                     <a href="/mainquizzes/{{$quiz->id}}/startquiz/result" class="btn btn-primary">Submit</a>
-                    
                 </div>
             </div>
-            <br>
-        </div><br>
-        
+        </div>
     </div>
-
 </body>
 </html>

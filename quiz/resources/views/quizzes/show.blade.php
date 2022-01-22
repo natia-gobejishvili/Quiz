@@ -39,8 +39,12 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Question:</strong>
-                {{ $quiz->question }}
+                <strong>Question:</strong><br>
+                {{ $quiz->question }}<br>
+                {{ $quiz->question }}<br>
+                {{ $quiz->question }}<br>
+                {{ $quiz->question }}<br>
+                {{ $quiz->question }}<br>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
@@ -61,13 +65,7 @@
                 <div class="form-check">
                     <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2" checked>  {{ $quiz->answer }}
                     <label class="form-check-label" for="radio2"></label>
-                </div>
-                
-            <!--    <strong>Answer:</strong><br>
-                {{ $quiz->answer }}<br>
-                {{ $quiz->answer }}<br>
-                {{ $quiz->answer }}<br>
-                {{ $quiz->answer }} -->
+                </div>          
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">

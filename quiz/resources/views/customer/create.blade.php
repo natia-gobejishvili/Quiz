@@ -1,4 +1,4 @@
-@extends('quizzes.layout')
+@extends('customer.layout')
   
 @section('content')
 <div class="row">
@@ -7,7 +7,7 @@
             <h2>Add New Quiz</h2>
         </div>
         <div class="pull-right">
-            <a class="btn btn-info" href="{{ route('quizzes.index') }}"> Back</a>
+            <a class="btn btn-info" href="{{ route('customer.index') }}"> Back</a>
         </div>
     </div>
 </div><br>
@@ -23,7 +23,7 @@
     </div>
 @endif
    
-<form action="{{ route('quizzes.store') }}" method="POST">
+<form action="{{ route('customer.store') }}" method="POST">
     @csrf
   
      <div class="row">
@@ -54,10 +54,6 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Question:</strong>
-                <input type="text" name="question" class="form-control" placeholder="Enter the question...">
-                <input type="text" name="question" class="form-control" placeholder="Enter the question...">
-                <input type="text" name="question" class="form-control" placeholder="Enter the question...">
-                <input type="text" name="question" class="form-control" placeholder="Enter the question...">
                 <input type="text" name="question" class="form-control" placeholder="Enter the question...">
             </div>
         </div>

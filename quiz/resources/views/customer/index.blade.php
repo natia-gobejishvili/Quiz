@@ -1,20 +1,20 @@
-@extends('quizzes.layout')
+@extends('customer.layout')
  
 @section('content')
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2 class="text-primary">Admin Panel</h2>
+                <h2 class="text-primary">Customer Dashboard</h2>
             </div>
 
             <div class="pull-right">
                 <a class="btn btn-warning" href="/mainquizzes">Home</a>  
             </div>
             <div class="pull-right">
-                <a class="btn btn-info" href="{{ route('login') }}">Login</a>
+                <a class="btn btn-info" href="{{ route('signout') }}">Logout</a>
             </div>
             <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('quizzes.create') }}">Create New Quiz</a>
+                <a class="btn btn-success" href="{{ route('customer.create') }}">Add New Quiz</a>
             </div><br>
         </div><br>
     </div><br>
@@ -35,7 +35,7 @@
             <th>Image</th>
             <th width="280px">Action</th>
         </tr>
-        @foreach ($quizzes as $quiz)
+        @foreach ($customer as $quiz)
         <tr>
             <td>{{ ++$i }}</td>
             <td>{{ $quiz->title }}</td>
@@ -44,11 +44,9 @@
             <td>{{ $quiz->question_id }}</td>
             <td>{{ $quiz->image }}</td>
             <td>
-                <form action="{{ route('quizzes.destroy',$quiz->id) }}" method="POST">
-   
-                    <a class="btn btn-info" href="{{ route('quizzes.show',$quiz->id) }}">Show</a>
+                <form action="{{ route('customer.destroy',$quiz->id) }}" method="POST">
     
-                    <a class="btn btn-primary" href="{{ route('quizzes.edit',$quiz->id) }}">Edit</a>
+                    <a class="btn btn-primary" href="{{ route('customer.edit',$quiz->id) }}">Edit</a>
    
                     @csrf
                     @method('DELETE')
@@ -60,6 +58,6 @@
         @endforeach
     </table>
   
-    {!! $quizzes->links() !!}
+    {!! $customer->links() !!}
       
 @endsection

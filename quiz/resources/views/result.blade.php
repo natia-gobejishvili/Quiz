@@ -11,14 +11,16 @@
 
 </head>
 <body>
-<div class="container mt-3">   
+    <div class="container mt-3">   
         <div class="d-flex justify-content-between mb-3">         
             <a class="btn btn-warning" href="/quizzes"> Admin Panel</a> 
             <a class="btn btn-info" href="/mainquizzes"> Home</a>
         </div>
 
-    <h1 class="text-center">Result Page</h1><br>
-   
+        <h1 class="text-center">Result Page</h1><br>
+
+        <p class="text-center text-danger">An error occurred while passing the quiz! </p>
+        <p class="text-center text-danger">Your result has not been recorded. Please try again!</p> 
     </div>
 
 </body>
